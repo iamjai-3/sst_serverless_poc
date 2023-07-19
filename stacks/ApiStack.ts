@@ -9,7 +9,8 @@ export function ApiStack({ stack }: StackContext) {
     defaults: {
       function: {
         bind: [table]
-      }
+      },
+      authorizer: 'iam'
     },
     routes: {
       'POST /notes': 'packages/functions/src/create.main',
